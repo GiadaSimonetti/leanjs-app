@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PhotosList.css'
 
 class PhotosList extends Component {
     constructor(){
@@ -15,7 +16,7 @@ class PhotosList extends Component {
         }).then(data => {
             let pictures = data.map((photo) => {
             return (
-                <div key={photo.id}>
+                <div key={photo.id} className="photo-div">
                     <img src={photo.thumbnailUrl} />
                 </div>
             )
@@ -29,7 +30,7 @@ class PhotosList extends Component {
 
         render() {
             return (
-            <div>
+            <div className="photos">
                 {this.state.pictures}
             </div>
             )
