@@ -1,0 +1,10 @@
+.photo-div {
+    display: inline-flex;
+}
+
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
