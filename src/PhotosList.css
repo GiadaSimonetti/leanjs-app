@@ -1,4 +1,4 @@
-.photo-div {
+/* .photo-div {
     display: inline-flex;
 }
 
@@ -7,4 +7,16 @@
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+} */
+.photo-container {
+    display: flex;
+    flex-wrap: flex;
+}
+
+
+.photo-item {
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding: 10px;
+    flex: 1 1 400;
 }

@@ -16,21 +16,19 @@ class PhotosList extends Component {
         }).then(data => {
             let pictures = data.map((photo) => {
             return (
-                <div key={photo.id} className="photo-div">
+                <div key={photo.id} className="photo-container">
                     <img src={photo.thumbnailUrl} />
                 </div>
             )
             })
             this.setState({pictures: pictures});
             console.log('data', data);
-            // console.log("state", this.state.pictures);
-        })
-
+        });
     }
 
         render() {
             return (
-            <div className="photos">
+            <div className="photo-item">
                 {this.state.pictures}
             </div>
             )

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PhotosList from './PhotosList';
+import Photo from './Photo';
+import { Route, Switch } from 'react-router-dom';
+// import { Link } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -12,8 +15,15 @@ class App extends Component {
           <h1 className="App-title">Photo app</h1>
         </header>
 
-        <PhotosList />
-      </div>
+
+        <Switch>
+
+        <Route path="/photo" component={PhotosList} />
+        <Route path="/photo/:id" component={Photo} />
+
+        </Switch>
+        </div>
+
     );
   }
 }
